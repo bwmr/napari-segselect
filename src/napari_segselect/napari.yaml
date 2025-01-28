@@ -1,0 +1,37 @@
+name: napari-segselect
+display_name: SegSelect
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+# see https://napari.org/stable/plugins/technical_references/manifest.html#fields for valid categories
+categories: ["Annotation", "Segmentation", "Acquisition"]
+contributions:
+  commands:
+    - id: napari-segselect.get_reader
+      python_name: napari_segselect._reader:napari_get_reader
+      title: Open data with SegSelect
+    - id: napari-segselect.make_container_widget
+      python_name: napari_segselect:ImageThreshold
+      title: Make threshold Container widget
+    - id: napari-segselect.make_magic_widget
+      python_name: napari_segselect:threshold_magic_widget
+      title: Make threshold magic widget
+    - id: napari-segselect.make_function_widget
+      python_name: napari_segselect:threshold_autogenerate_widget
+      title: Make threshold function widget
+    - id: napari-segselect.make_qwidget
+      python_name: napari_segselect:ExampleQWidget
+      title: Make example QWidget
+  readers:
+    - command: napari-segselect.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.npy']
+  widgets:
+    - command: napari-segselect.make_container_widget
+      display_name: Container Threshold
+    - command: napari-segselect.make_magic_widget
+      display_name: Magic Threshold
+    - command: napari-segselect.make_function_widget
+      autogenerate: true
+      display_name: Autogenerate Threshold
+    - command: napari-segselect.make_qwidget
+      display_name: Example QWidget

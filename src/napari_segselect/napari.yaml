@@ -9,8 +9,17 @@ contributions:
     - id: napari-segselect.read_mrc
       title: Read ".mrc" files
       python_name: napari_segselect._reader:napari_get_reader
+    - id: napari-segselect.write_segmentation
+      title: Write segmentation to ".mrc"
+      python_name: napari_segselect._writer:write_segmentation
   readers:
     - command: napari-segselect.read_mrc
       filename_patterns:
       - '*.mrc'
       accepts_directories: false
+  writers:
+     - command: napari-segselect.write_segmentation
+       layer_types:
+       - labels+
+       filename_extensions:
+       - .mrc

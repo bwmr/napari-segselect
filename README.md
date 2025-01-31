@@ -20,11 +20,11 @@ Select a connected component from a [membrain-seg](https://github.com/teamtomo/m
 
 You can install `napari-segselect` via [pip]:
 
-    `pip install napari-segselect`
+    pip install napari-segselect
    
 Or directly from GitHub:
 
-    `pip install git+https://github.com/bwmr/napari-segselect.git`
+    pip install git+https://github.com/bwmr/napari-segselect.git
 
 
 ## License

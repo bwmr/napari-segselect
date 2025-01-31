@@ -12,6 +12,9 @@ contributions:
     - id: napari-segselect.write_segmentation
       title: Write segmentation to ".mrc"
       python_name: napari_segselect._writer:write_segmentation
+    - id: napari-segselect.select_label
+      title: Select labels
+      python_name: napari_segselect._widget:select_label_widget
   readers:
     - command: napari-segselect.read_mrc
       filename_patterns:
@@ -23,3 +26,7 @@ contributions:
        - labels+
        filename_extensions:
        - .mrc
+  widgets:
+     - command: napari-segselect.select_label
+       autogenerate: True
+       display_name: "Select Label"

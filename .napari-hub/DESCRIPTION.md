@@ -1,9 +1,11 @@
-<!-- This file is a placeholder for customizing description of your plugin 
-on the napari hub if you wish. The readme file will be used by default if
-you wish not to do any customization for the napari hub listing.
+This plugin is meant to clean up membrane segmentations in cryo-ET data from `membrain-seg`.
 
-If you need some help writing a good description, check out our 
-[guide](https://github.com/chanzuckerberg/napari-hub/wiki/Writing-the-Perfect-Description-for-your-Plugin)
--->
+1. Run `membrain-seg` with the `--store-connected-components` flag, meaning each membrane will get an individual number.
 
-The developer has not yet provided a napari-hub specific description.
+2. Open the segmentation in Napari (optionally, also your tomogram), find out which component numbers correspond to your feature.
+
+3. Enter these numbers and a feature name in the widget, press run. 
+
+4. Save the resulting layer using naparis built-in dialog. 
+
+5. Now you have a standalone binary segmentation of your feature of interest. 

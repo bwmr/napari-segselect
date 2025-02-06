@@ -1,7 +1,7 @@
 [project]
 name = "napari-segselect"
 dynamic = ["version"]
-description = "Select a connected component from a membrain-seg segmentation."
+description = "Select a component from a membrain-seg segmentation."
 readme = "README.md"
 license = {file = "LICENSE"}
 authors = [

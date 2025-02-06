@@ -28,6 +28,7 @@ dependencies = [
     "numpy",
     "magicgui",
     "mrcfile",
+    "scipy",
 ]
 
 [project.optional-dependencies]

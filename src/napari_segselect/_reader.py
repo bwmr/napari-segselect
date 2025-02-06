@@ -8,6 +8,7 @@ https://napari.org/stable/plugins/guides.html?#readers
 
 import mrcfile
 import numpy as np
+from scipy import ndimage
 
 
 def napari_get_reader(path: str):
@@ -37,6 +38,11 @@ def read_mrc_labels(path):
         data = mrc.data
         # Ensure the data is of type int for label layer
         data = data.astype(np.int16)
+
+        # Check, whether connected components have been calculated beforehands
+        # If not, calculate here
+        if np.max(data) == 1:
+            data, _ = ndimage.label(data, np.ones((3,3,3)))
 
         return [(data, {"name": "Connected Components"}, "labels")]
 

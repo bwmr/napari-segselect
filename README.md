@@ -9,7 +9,7 @@ Select a connected component from a [membrain-seg](https://github.com/teamtomo/m
 
 ## Usage
 
-1. Run `membrain-seg` with the `--store-connected-components` flag.
+1. Run `membrain-seg` with the `--store-connected-components` flag (optional, otherwise connected components will be calculated while opening)
 2. Open the segmentation in Napari, find out which component numbers correspond to your feature.
     ![Label Layer](images/image2.png)
 3. Enter these numbers and a feature name in the widget, press run. 

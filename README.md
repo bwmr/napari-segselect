@@ -11,9 +11,12 @@ Select a connected component from a [membrain-seg](https://github.com/teamtomo/m
 
 1. Run `membrain-seg` with the `--store-connected-components` flag.
 2. Open the segmentation in Napari, find out which component numbers correspond to your feature.
+    ![Label Layer](images/image2.png)
 3. Enter these numbers and a feature name in the widget, press run. 
+    ![Widget](images/image3.png)
 4. Save the resulting layer using naparis built-in dialog. 
-5. Now you have a standalone binary segmentation of your feature of interest. 
+5. Now you have a standalone binary segmentation of your feature of interest.
+    ![Output](images/image4.png)
 
 
 ## Installation
